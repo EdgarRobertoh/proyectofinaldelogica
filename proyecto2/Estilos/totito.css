@@ -1,0 +1,55 @@
+body {
+    background-image: url("https://media.tenor.com/JeF8eWfrNAcAAAAC/lofi.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    opacity: 0.4;
+    width: 200px;
+    height: 200px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+  }
+
+  button:hover {
+    background-color: #f5f5dc;
+    cursor: pointer;
+  }
+
+
+#contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+
+
+
+
+  }
+  #marcador {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #marcador p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #marcador span {
+    font-weight: bold;
+  }
+
+  audio{
+      color: aqua;
+      opacity: 0.2;
+  }

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex primera generación</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+        #search {
+            display: block;
+            width: 80%;
+            height: 40px;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .pokemon-info-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        .pokemon-info-modal h2 {
+            margin-top: 0;
+        }
+        .pokemon-info-modal button {
+            display: block;
+            margin: 10px auto 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .pokemon-info-modal button:hover {
+            background-color: #0056b3;
+        }
+        #comparar-container {
+            margin: 20px auto;
+            padding: 10px;
+            width: 90%;
+            max-width: 800px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        #comparar-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        #comparar-btn:hover {
+            background-color: #218838;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body background="proyecto1\img\background.png">
+    <div class="background-blur"></div>
+    <header>
+        <nav class="nav">
+            <img src="./img/logo.png" alt="Logo Pokédex">
+            <input id="search" type="text" placeholder="Buscar Pokémon por nombre...">
+            <ul class="nav-list">
+                <li class="nav-item"><button class="btn btn-header" id="ver-todos">Ver todos</button></li> 
+                <li class="nav-item"><button class="btn btn-header normal" id="normal">Normal</button></li>
+                <li class="nav-item"><button class="btn btn-header fire" id="fire">Fire</button></li>
+                <li class="nav-item"><button class="btn btn-header water" id="water">Water</button></li>
+                <li class="nav-item"><button class="btn btn-header grass" id="grass">Grass</button></li>
+                <li class="nav-item"><button class="btn btn-header electric" id="electric">Electric</button></li>
+                <li class="nav-item"><button class="btn btn-header ice" id="ice">Ice</button></li>
+                <li class="nav-item"><button class="btn btn-header fighting" id="fighting">Fighting</button></li>
+                <li class="nav-item"><button class="btn btn-header poison" id="poison">Poison</button></li>
+                <li class="nav-item"><button class="btn btn-header ground" id="ground">Ground</button></li>
+                <li class="nav-item"><button class="btn btn-header flying" id="flying">Flying</button></li>
+                <li class="nav-item"><button class="btn btn-header psychic" id="psychic">Psychic</button></li>
+                <li class="nav-item"><button class="btn btn-header bug" id="bug">Bug</button></li>
+                <li class="nav-item"><button class="btn btn-header rock" id="rock">Rock</button></li>
+                <li class="nav-item"><button class="btn btn-header ghost" id="ghost">Ghost</button></li>
+                <li class="nav-item"><button class="btn btn-header dark" id="dark">Dark</button></li>
+                <li class="nav-item"><button class="btn btn-header dragon" id="dragon">Dragon</button></li>
+                <li class="nav-item"><button class="btn btn-header steel" id="steel">Steel</button></li>
+                <li class="nav-item"><button class="btn btn-header fairy" id="fairy">Fairy</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <button onclick="history.back();" type="button">Retroceder</button>
+        <div id="todos">
+            <div class="pokemon-todos" id="listaPokemon">
+                <!-- Aquí irán los Pokémon -->
+            </div>
+        </div>
+
+        <div class="pokemon-info-modal" id="pokemon-info-modal">
+            <h2 id="pokemon-modal-name"></h2>
+            <p id="pokemon-modal-description"></p>
+            <button id="close-modal">Cerrar</button>
+        </div>
+
+        <button id="comparar-btn">Comparar Pokémon Seleccionados</button>
+        <div id="comparar-container"></div>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
